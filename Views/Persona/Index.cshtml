@@ -1,0 +1,110 @@
+﻿@model List<Persona>
+
+
+<h1>Listado de Personas</h1>
+<div class="col-md-12">
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalAgregar">
+        Agregar Persona
+    </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalAgregar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Agregar un registro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="name" id="nombre" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad</label>
+                    <input type="number" name="name" id="edad" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="fechaNac">Fecha de Nacimiento</label>
+                    <input type="date" name="name" id="fechaNac" class="form-control" />
+                </div>
+                <div class="form-group" ">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="estudiante">¿Actualmente Estudias?</label>
+                        <input class="form-check-input" type="checkbox" id="estudiante">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="guardar">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="limpiarCajas()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Estudiante</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Editar registro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+
+                    <input type="text" name="name" id="idE" class="form-control" hidden />
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="name" id="nombreE" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad</label>
+                    <input type="number" name="name" id="edadE" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="fechaNac">Fecha de Nacimiento</label>
+                    <input type="date" name="name" id="fechaNacE" class="form-control" />
+                </div>
+                <div class="form-group" ">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="estudiante">¿Actualmente Estudias?</label>
+                        <input class="form-check-input" type="checkbox" id="estudianteE" value="option1">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Editar">Editar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
